@@ -59,7 +59,7 @@ const Index = ({bgcolor}) => {
   return (
     <Fragment>
       <motion.div
-        className={`fixed transition-all duration-500 ${scrolled ? 'top-[-100px]' : 'top-0 '} ${scrolled100 ? 'bg-[#0d074f]' : ' '} ${bgColor ? bgColor :''} px-5 rounded-b-[20px] lg:px-10 left-0 right-0  text-[50px] text-[white] w-full z-50`}
+        className={`fixed transition-all duration-500 ${scrolled ? 'top-[-100px]' : 'top-0 '} ${scrolled100 ? 'bg-[black]' : ' '} ${bgColor ? bgColor :''} px-5 rounded-b-[20px] lg:px-10 left-0 right-0  text-[50px] text-[white] w-full z-50`}
         initial={{ top: 0 }}
         animate={{ top: scrolled ? '-100px' : 0 }}
       >
@@ -68,11 +68,11 @@ const Index = ({bgcolor}) => {
             <img src={`/assets/logo.webp`} alt="logo" className="h-[100px]" />
           </div>
           <div className="flex items-center justify-center gap-5 text-[20px]">
-          <Link href="/" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`} >Home</Link>
-            <Link href="/works" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "works" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Works</Link>
-            <Link href="/about" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "about" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>About</Link>
-            {/* <Link href="/contact" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "contact" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Contact</Link> */}
-            <Link href="/blog" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "blog"? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Blog</Link>
+          <Link href="/" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`} >Home</Link>
+            <Link href="/works" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "works" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>Works</Link>
+            <Link href="/about" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "about" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>About</Link>
+            {/* <Link href="/contact" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "contact" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>Contact</Link> */}
+            <Link href="/blog" className={`hidden md:block cursor-pointer px-4 py-2 ${currenttab === "blog"? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>Blog</Link>
             <div className={`block md:hidden cursor-pointer px-4 py-2 `}><CgMenuMotion className='text-[35px]' onClick={handleAside} /></div>
           </div>
         </div>
@@ -91,11 +91,11 @@ const Index = ({bgcolor}) => {
         } w-[250px] z-50 top-0 py-10 bg-[#5074af] bottom-0 right-0 text-[50px] text-[white]`}
       >
         <div className="flex items-center justify-start w-[100%] gap-10 flex-col text-[18px]">
-            <div className={` cursor-pointer px-4 py-2 ${true ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`} >Home</div>
-            <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Works</div>
-            <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>About</div>
-            <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Contact</div>
-            <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Blog</div>
+            <Link href='/'><div className={` cursor-pointer px-4 py-2 ${currenttab === "" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`} >Home</div></Link>
+            <Link href='/works'><div className={` cursor-pointer px-4 py-2 ${currenttab === "works" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Works</div></Link>
+            <Link href='/about'><div className={` cursor-pointer px-4 py-2 ${currenttab === "about" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>About</div></Link>
+            {/* <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Contact</div> */}
+            <Link href='/blog'> <div className={` cursor-pointer px-4 py-2 ${currenttab === "blog" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Blog</div></Link>
         </div>
       </motion.div>
     </Fragment>

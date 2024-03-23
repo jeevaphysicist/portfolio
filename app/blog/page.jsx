@@ -2,6 +2,7 @@
 import React, { Fragment , useEffect , useState } from 'react';
 import Blog from "@Components/Blog/Index";
 import Header from "../../Components/Header/Header";
+import Footer from '@Components/Footer/Footer';
 
 const page = () => {
   const [blogs,setBlogs] = useState([]);
@@ -18,8 +19,9 @@ setBlogs(data);
 }
   return (
     <Fragment>
-        <Header bgcolor="bg-[grey] border "/>
+        <Header bgcolor="bg-black"/>
          <Blog blogs={blogs}/>
+         <Footer/>
     </Fragment>
   )
 }

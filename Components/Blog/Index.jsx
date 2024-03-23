@@ -11,7 +11,6 @@ const Index = ({blogs}) => {
 
   return (
     <Fragment>
-        <Header bgcolor="bg-[grey] border "/>
         <div className='mt-[120px]'>
             <div className='text-[30px] font-bold px-5 lg:px-10'>MY BLOGS</div>
             <div className='my-10 px-5 lg:px-10'>

@@ -46,11 +46,17 @@ const Works = () => {
               Link:"https://thira.onrender.com/",
               Type:"Content Creator Platform"
              },
+             {
+              Title:"Netflix Static Responsive Homepage",
+              Image:"https://firebasestorage.googleapis.com/v0/b/jeevanthamportfolio.appspot.com/o/Screenshot%20(225).png?alt=media&token=1f6f7d19-4146-414b-8d5a-f35ccf6a266d",
+              Link:"https://netflix.netlify.app/",
+              Type:"Static Site - HTML/CSS, Boostrap"
+             }
             ]
   return (
     <Fragment>
          <div className='py-10 lg:px-10'>
-            <div className='flex items-center  justify-center w-[100%] text-[30px] lg:text-[50px] font-bold'>Works</div>
+            <div className='flex items-center  justify-center w-[100%] text-[30px] lg:text-[50px] font-bold'>Projects</div>
             <InfiniteMovingCardsDemo data={data} />
          </div>
     </Fragment>

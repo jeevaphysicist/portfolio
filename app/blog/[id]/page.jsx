@@ -10,11 +10,14 @@ import Typography from '@mui/material/Typography';
 import Skeleton from '@mui/material/Skeleton';
 import Grid from '@mui/material/Grid';
 import Header from "../../../Components/Header/Header"
+import Footer from '@Components/Footer/Footer'
 const variants = ['h1', 'h3', 'body1', 'caption'];
 
 const ReactQuill = dynamic(() => import('react-quill'), { // Dynamically import ReactQuill
   ssr: false, // Disable server-side rendering
 });
+
+
 
 function TypographyDemo(props) {
   const { loading = false } = props;
@@ -33,6 +36,7 @@ function TypographyDemo(props) {
 TypographyDemo.propTypes = {
   loading: PropTypes.bool,
 };
+
 
 const page = ({params}) => {
     const [blog,setBlog] = useState('');
@@ -81,7 +85,7 @@ const page = ({params}) => {
 
   return (
    <Suspense>
-    <Header bgcolor="bg-[grey] border "/>
+    <Header bgcolor="bg-[black] "/>
     {
         blog ? 
         <div className='w-[100%] mt-[150px] px-5 flex flex-col items-center justify-center'>
@@ -120,6 +124,7 @@ const page = ({params}) => {
     </Grid>
     </div>
     }
+    <Footer/>
    </Suspense>
   )
 }
