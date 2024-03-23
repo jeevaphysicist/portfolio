@@ -112,8 +112,26 @@ const page = ({params}) => {
       </div>
      
       :
-      <div className='w-[100%] flex items-center justify-center'>
+      <div className='w-[100%] flex  flex-col items-center justify-center'>
       <Grid container xs={{width:"300px"}} spacing={4}>
+        <Grid item xs></Grid>
+      <Grid item xs>
+        <TypographyDemo loading />
+      </Grid>
+      <Grid item xs>
+        {/* <TypographyDemo /> */}
+      </Grid>
+    </Grid>
+    <Grid container xs={{width:"300px"}} spacing={4}>
+        <Grid item xs></Grid>
+      <Grid item xs>
+        <TypographyDemo loading />
+      </Grid>
+      <Grid item xs>
+        {/* <TypographyDemo /> */}
+      </Grid>
+    </Grid>
+    <Grid container xs={{width:"300px"}} spacing={4}>
         <Grid item xs></Grid>
       <Grid item xs>
         <TypographyDemo loading />
