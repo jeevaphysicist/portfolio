@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { cn } from "../../utils/cn";
 import CardEffect from "../../Animaations/Cards/Index";
+import Link from "next/link";
 
 export function InfiniteMovingCards({
   items,
@@ -82,7 +83,9 @@ export function InfiniteMovingCards({
         )}
       >
         {items.map((item, idx) => (
+          <Link href={'/works'}>
         <CardEffect data={item}/>
+        </Link>
         ))}
       </ul>
     </div>
