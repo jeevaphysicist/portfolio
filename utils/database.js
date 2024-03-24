@@ -7,7 +7,7 @@ export const ConnectToDB = async () => {
     if (isConnect) return;
     
     try{
-        await mongoose.connect(process.env.MONGO_URI, {dbName:"jeevalearnnext",useNewUrlParser: true , useUnifiedTopology :true});
+        await mongoose.connect(process.env.MONGO_URI, {dbName:"portfolio",useNewUrlParser: true , useUnifiedTopology :true});
         console.log("MongoDB Connected...");
         isConnect=true;
         
