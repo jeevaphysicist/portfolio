@@ -49,7 +49,7 @@ const Works = () => {
              {
               Title:"Netflix Static Responsive Homepage",
               Image:"https://firebasestorage.googleapis.com/v0/b/jeevanthamportfolio.appspot.com/o/Screenshot%20(225).png?alt=media&token=1f6f7d19-4146-414b-8d5a-f35ccf6a266d",
-              Link:"https://netflix.netlify.app/",
+              Link:"https://netflix-qc56.onrender.com/",
               Type:"Static Site - HTML/CSS, Boostrap"
              }
             ]
