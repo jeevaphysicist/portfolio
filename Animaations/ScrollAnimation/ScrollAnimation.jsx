@@ -81,7 +81,7 @@ export const Card = ({
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="max-w-5xl -mt-3 mx-auto h-[30rem] md:h-[35rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="max-w-5xl -mt-12 md:mt-3 mx-auto h-[30rem] md:h-[35rem] w-full border-4 border-[#6C6C6C] p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
       <div className="bg-gray-100 h-full pt-24 md:pt-40 w-full rounded-2xl grid grid-cols-1 gap-4 overflow-hidden p-4">
         {users.map((user, idx) => (
@@ -97,11 +97,11 @@ export const Card = ({
             <div className="absolute top-2 right-2 rounded-full text-xs font-bold bg-white px-2 py-1">
               {user.badge}
             </div>
-            <div className="flex items-center justify-center flex-col py-5">
-            <div>{user.Name}</div>
-            <div>{user.Degree}</div>
-            <div>{user.Field}</div>
-            <div>{user.Start} - {user.End}</div>
+            <div className="flex items-center justify-center w-[100%] flex-col py-5">
+            <div className="font-extrabold text-center ">{user.Name}</div>
+            <div className="font-semibold">{user.Degree}</div>
+            <div className="font-semibold">{user.Field}</div>
+            <div className="font-medium">{user.Start} - {user.End}</div>
             </div>
           </motion.div>
         ))}

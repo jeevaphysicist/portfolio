@@ -57,6 +57,7 @@ const Works = () => {
     <Fragment>
          <div className='py-10 lg:px-10'>
             <div className='flex items-center  justify-center w-[100%] text-[30px] lg:text-[50px] font-bold'>Projects</div>
+            <div className='flex items-center  justify-center w-[100%] text-[18px] lg:text-[30px] font-medium text-[#1e1e1e]'>Innovating Tomorrow, One Project at a Time.</div>
             <InfiniteMovingCardsDemo data={data} />
          </div>
     </Fragment>

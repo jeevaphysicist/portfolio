@@ -8,11 +8,14 @@ import Education from '../MiniComponents/Education';
 import HeroSection from "../../Animaations/Herosection/Index";
 import CardEffect from "../../Animaations/Cards/Index";
 import { HeroScrollDemo } from "../../Animaations/ScrollAnimation/Index"
+import MyBlog from "../../Components/Blog/Index";
 
 
  
 const Index = () => {
 
+
+  
  
 
   return (
@@ -22,6 +25,7 @@ const Index = () => {
       <Profile/> 
       <Works/> 
       <HeroScrollDemo/>
+     
       {/* <Education/> */}
 
      

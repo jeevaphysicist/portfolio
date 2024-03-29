@@ -88,14 +88,14 @@ const Index = ({bgcolor}) => {
       <motion.div
         className={`fixed transition-all duration-500 ${
           isAsideOpen ? 'mr-0 rounded-l-[20px]' : '-mr-[300px]'
-        } w-[250px] z-50 top-0 py-10 bg-[#5074af] bottom-0 right-0 text-[50px] text-[white]`}
+        } w-[250px] z-50 top-0 py-10 bg-[#121212] bottom-0 right-0 text-[50px] text-[white]`}
       >
         <div className="flex items-center justify-start w-[100%] gap-10 flex-col text-[18px]">
-            <Link href='/'><div className={` cursor-pointer px-4 py-2 ${currenttab === "" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`} >Home</div></Link>
-            <Link href='/works'><div className={` cursor-pointer px-4 py-2 ${currenttab === "works" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Works</div></Link>
-            <Link href='/about'><div className={` cursor-pointer px-4 py-2 ${currenttab === "about" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>About</div></Link>
-            {/* <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Contact</div> */}
-            <Link href='/blog'> <div className={` cursor-pointer px-4 py-2 ${currenttab === "blog" ? "text-[#5074af] bg-white font-bold rounded-[7px] " : ""}`}>Blog</div></Link>
+            <Link href='/'><div className={` cursor-pointer px-4 py-2 ${currenttab === "" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`} >Home</div></Link>
+            <Link href='/works'><div className={` cursor-pointer px-4 py-2 ${currenttab === "works" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>Works</div></Link>
+            <Link href='/about'><div className={` cursor-pointer px-4 py-2 ${currenttab === "about" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>About</div></Link>
+            {/* <div className={` cursor-pointer px-4 py-2 ${false ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>Contact</div> */}
+            <Link href='/blog'> <div className={` cursor-pointer px-4 py-2 ${currenttab === "blog" ? "text-[#333333] bg-white font-bold rounded-[7px] " : ""}`}>Blog</div></Link>
         </div>
       </motion.div>
     </Fragment>
