@@ -1,27 +1,21 @@
-"use client"
-import React, { Fragment , useEffect , useState } from 'react';
-import Blog from "@Components/Blog/Index";
-import Header from "../../Components/Header/Header";
-import Footer from '@Components/Footer/Footer';
+import BlogPage from '@Components/Blog/BlogPage'
+import Head from 'next/head';
+import React, { Fragment } from 'react'
+
+export const metadata = {
+  title: "Blogs | Jeevanantham S",
+  description: "Jeevanantham Digital Profile",
+};
 
 const page = () => {
-  const [blogs,setBlogs] = useState([]);
-
-  useEffect(()=>{
-    GetAllBlogs()
-},[])
-
-const GetAllBlogs = async ()=>{
-let response = await fetch("/api/blog/new");
-const data = await response.json();
-setBlogs(data);
-// console.log("data",data);
-}
+  
   return (
     <Fragment>
-        <Header bgcolor="bg-black"/>
-         <Blog blogs={blogs}/>
-         <Footer/>
+      <Head>
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+    </Head>
+       <BlogPage/>
     </Fragment>
   )
 }
