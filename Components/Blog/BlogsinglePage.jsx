@@ -53,12 +53,9 @@ const BlogSinglePage = ({params  }) => {
          GetBlogData()
     },[blogid]);
 
-    const GetBlogData = async ()=>{
-        let blogdata = await getSingleBlog(blogid);
-        console.log("blog data",blogdata);
-        
-        setBlog(blogdata);
-      
+    const GetBlogData = async ()=>{       
+        let response = await fetch(`/api/blog/getsingleblog/${blogid}`);
+        const data = await response.json();    
     }
 
    

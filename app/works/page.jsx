@@ -7,13 +7,13 @@ import Head from 'next/head';
 export const metadata = {
   title: "Works | Jeevanantham S",
   description: "Jeevanantham Digital Profile",
+  openGraph: {
+    images: 'https://firebasestorage.googleapis.com/v0/b/jeevanthamportfolio.appspot.com/o/Screenshot%202024-03-12%20133317.png?alt=media&token=3514200f-accf-4937-a88a-ab58a8dd565b',
+  },
 };
 
 const page = () => {
-     <Head>
-    <title>{metadata.title}</title>
-    <meta name="description" content={metadata.description} />
-    </Head>
+     
   
   return (
     <Fragment>
