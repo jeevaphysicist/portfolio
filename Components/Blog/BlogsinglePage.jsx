@@ -11,6 +11,7 @@ import Skeleton from '@mui/material/Skeleton';
 import Grid from '@mui/material/Grid';
 import Header from "@/Components/Header/Header"
 import Footer from '@Components/Footer/Footer';
+import SEO from '@Components/SEO/SEO'
 const variants = ['h1', 'h3', 'body1', 'caption'];
 
 const ReactQuill = dynamic(() => import('react-quill'), { // Dynamically import ReactQuill
@@ -38,7 +39,7 @@ TypographyDemo.propTypes = {
 };
 
 
-const BlogSinglePage = ({params }) => {
+const BlogSinglePage = ({params  }) => {
     const [blog,setBlog] = useState('');
     const searchParams = useSearchParams()
  
@@ -55,6 +56,7 @@ const BlogSinglePage = ({params }) => {
         let response = await fetch(`/api/blog/getsingleblog/${blogid}`);
         const data = await response.json();
         setBlog(data);
+      
     }
 
    
@@ -85,6 +87,7 @@ const BlogSinglePage = ({params }) => {
 
   return (
    <Suspense>
+    <SEO title={"something"}/>
     <Header bgcolor="bg-[black] "/>
     {
         blog ? 
