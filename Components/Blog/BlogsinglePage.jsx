@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid';
 import Header from "@/Components/Header/Header"
 import Footer from '@Components/Footer/Footer';
 import SEO from '@Components/SEO/SEO'
+import { getSingleBlog } from '@API/Api'
 const variants = ['h1', 'h3', 'body1', 'caption'];
 
 const ReactQuill = dynamic(() => import('react-quill'), { // Dynamically import ReactQuill
@@ -53,9 +54,10 @@ const BlogSinglePage = ({params  }) => {
     },[blogid]);
 
     const GetBlogData = async ()=>{
-        let response = await fetch(`/api/blog/getsingleblog/${blogid}`);
-        const data = await response.json();
-        setBlog(data);
+        let blogdata = await getSingleBlog(blogid);
+        console.log("blog data",blogdata);
+        
+        setBlog(blogdata);
       
     }
 

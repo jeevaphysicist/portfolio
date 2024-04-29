@@ -1,3 +1,4 @@
+import { getSingleBlog } from '@API/Api';
 import BlogSinglePage from '@Components/Blog/BlogsinglePage'
 
 import SEO from '@Components/SEO/SEO';
@@ -7,16 +8,11 @@ import React, { Fragment } from 'react';
 export async function generateMetadata({ params }) {
   const blogId = params.id; 
   try {
-    const response = await fetch(`https://jeevananthamdev.netlify.app/api/blog/getsingleblog/${blogId}`,{ method: "GET" })
-    console.log(response)
-    if (!response.ok) {
-      throw new Error('Failed to fetch blog data');
-    }
-    const data = await response.json();
-    console.log(data);
+     let data = await getSingleBlog(blogId);
+     console.log("data",data);
     return {
-      title: data.title, // Assuming 'data' contains a 'title' field
-      // Add other metadata properties as needed
+      title: data.title, 
+     
     };
   } catch (error) {
     console.error('Error fetching blog data:', error.message);
