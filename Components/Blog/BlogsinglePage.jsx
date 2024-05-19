@@ -49,7 +49,6 @@ const BlogSinglePage = ({params  }) => {
     const [blog,setBlog] = useState('');
  
     const blogid = params.id ;
-    // console.log("Blogid",blogid);
 
   
 
@@ -61,7 +60,7 @@ const BlogSinglePage = ({params  }) => {
         let response = await fetch(`/api/blog/getsingleblog/${blogid}`);
         const data = await response.json(); 
         setBlog(data);
-        console.log("data",data.blogdata);   
+        console.log("data",data);   
     }
 
    
