@@ -20,6 +20,11 @@ const ReactQuill = dynamic(() => import('react-quill'), { // Dynamically import 
 });
 
 
+const HtmlContent = ({ htmlString }) => {
+  return (
+    <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+  );
+};
 
 function TypographyDemo(props) {
   const { loading = false } = props;
@@ -42,7 +47,6 @@ TypographyDemo.propTypes = {
 
 const BlogSinglePage = ({params  }) => {
     const [blog,setBlog] = useState('');
-    const searchParams = useSearchParams()
  
     const blogid = params.id ;
     // console.log("Blogid",blogid);
@@ -55,7 +59,9 @@ const BlogSinglePage = ({params  }) => {
 
     const GetBlogData = async ()=>{       
         let response = await fetch(`/api/blog/getsingleblog/${blogid}`);
-        const data = await response.json();    
+        const data = await response.json(); 
+        setBlog(data);
+        console.log("data",data.blogdata);   
     }
 
    
@@ -109,6 +115,7 @@ const BlogSinglePage = ({params  }) => {
         formats={formats}
         modules={{ toolbar: false }}
         />
+         {/* <HtmlContent htmlString={blog.blogdata} /> */}
       </div>
         
       </div>
